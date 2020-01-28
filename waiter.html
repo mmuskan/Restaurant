@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>waiter details </title>
+<style>
+body{ 
+font-family:latha;
+color:white;
+background: url(myimages/2.jpg)no-repeat;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<h2> FILL IN THE WAITER DETAILS </h2>
+<form action="waiter.php" method="post">
+<p> NAME:   <input type="text" name="Name" > </p>
+<p> Salary: <input type ="number" name="Salary"> </p>
+<p> Experience: <input type="number" name="Experience"> </p>
+<p> Phno:   <input type ="phno" name="Phno"  pattern="[0-9]{10}" placeholder="enter ur 10 digit phone number"
+title="phone number should be of 10 digits"></p> 
+<p> Email:  <input type ="email" name="Email"> </p>
+<p> Date:   <input type ="date" name="Date"> </p>
+<br>
+<input type="submit" value="insert"> <br>
+<a href = 'waiterview.php'>VIEW RESULT</a>	
+<br>
+<a href = 'waiterquery1.php'>WAITER QUERY1</a>	
+<br>
+<a href = 'waiterquery2.php'>WAITER QUERY2</a>	
+<br>
+<a href = 'deletewaiter.php'>WAITER DELETE</a>	
+<br>
+<a href = 'waiterupdate.php'>WAITER UPDATE</a>
+<br>
+<a href = 'trigger.php'>TRIGGER</a>	
+</form>
+</body>
+</html>

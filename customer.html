@@ -1,0 +1,65 @@
+<html>
+<head>
+
+<h1>Customer sign in</h1>
+<title>Customer Sign up</title>
+</head>
+
+<style>
+
+*{margin 0; padding: 0;}
+body{background: url(myimages/8.jpg)no-repeat;background-size:cover; font-family: sans-serif;}
+.form-wrap{ width: 320px; background:#3e3d3d; padding: 40px 20px; box-sizing: border-box; position: fixed; left: 35%; top: 20%; transfom: translate(-50%, -50%);}
+h1{text-align: centre; color:black; font-weight: normal; margin-bottom: 20px;}
+
+
+
+input{width: 100%; background:none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #fff;}
+
+input[type="button"]{ background: #bac675; border: 0; cursor: pointer; color:#3e3d3d}
+input[type="button"]:hover{background: #a4b15c; transition: -6s;}
+
+placeholder{color: #fff}
+
+</style>
+<body>
+<div class="form-wrap">
+<form action="customer.php" method="post">
+<h2>Sign up</h2>
+
+<form name="login" onsubmit="return validation()"> 
+<input type="text" placeholder="Name" name="Name">
+<input type="phno" placeholder="10 digit Phno" name="Phno" pattern="[0-9]{10}">
+<input type="text" placeholder="Address" name="Address">
+<input type="Submit" value="Sign-up">
+<a href ='customerview.php'>VIEW RESULT</a>
+</form>
+<!--java script-->
+<script type="text/javascript">
+function validation(){
+ var Name = document.login.Name.value;
+  var Address = document.login.Name.value;
+ //check empty field
+ if(Name==""||Address==""){
+ alert("Name should not be blank");
+ return;
+ }
+ //Name shouldnot start with@,_and number
+ var str=Name.slice(0,1);
+ if(Name.slice(0,1)=="_"||Name.slice(0,1)=="@"||str.match(/[0-9]/d)!=null)
+ {
+ alert("Name should not start with _,@ and number");
+ return;
+ }
+}
+</script>
+
+</form>
+</div>
+<a href = 'customerquery1.php'>CUSTOMER QUERY!</a>	
+<br>
+<a href = 'deletecustomer.php'>CUSTOMER DELETE</a>	
+<br>
+<a href = 'customerupdate.php'>CUSTOMER UPDATE</a>
+</body>
+</html>
